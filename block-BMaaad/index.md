@@ -13,16 +13,15 @@ Write code to:-
 use weather
 - create a capped collection named `temperature` with maximum of 3 documents and try inserting more than 3 to see the result.
 ```
-db ccreateCollection('movies',{capped: true, size:1000, max:3})
+db.createCollection('temperature',{capped: true, size:1024, max:3})
 
-db.movies.insertOne({title: "jaddu"})
-db.movies.insertOne({title: "Krish"})
-db.movies.insertOne({title: "undisputed"})
+db.temperature.insertOne([{delhi:64}, {mumbai:32}, {hydrabaad: 43}]);
+db.temperature.find();
 ```
 - create a simple collection named `humidity`
 db.collection('humidity')
 - check whether `temperature` collection is capped or not ?
-db.movies.find().pretty()
+db.temperature.isCapped();
 
 - Delete `humidity` collection and then the entire database
 (weather).
