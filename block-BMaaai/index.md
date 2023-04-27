@@ -6,7 +6,9 @@ writeCode
 mongoimport --host <host_name> --username <user_name> --password <password> --db
 DB_NAME --collection COLLECTION_NAME --file cities.json(file location) --jsonArray
 (an array of json data)
+
 ```
+mongoimport "C:\Users\RAHUL\Desktop\generated (2).json" -d test -c users --jsonArray --drop
 
 host, username and password are optional fields.
 
@@ -50,7 +52,7 @@ Go to `https://www.json-generator.com/`
 ```
 mongoexport --db state --collection cities --out ~/Desktop/states/city.json --jsonArray
 ```
-
+mongoexport --db state --collection cities --out ~/Desktop/state/city.json --jsonArray
 ## BLOCK-writeCode
 
 Export `users` collection from `test` database onto `Desktop` in a file named `exported.json`.
